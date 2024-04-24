@@ -8,22 +8,24 @@
 //プレイシーン初期化
 void ScenePlay::Init()
 {
+	player.Init();
 	SceneManager::g_CurrenySceneID = SCENEID::SCENE_ID_LOOP_PLAY;
 }
 
 //プレイシーン通常処理
 void ScenePlay::Step()
 {
-	if (Input::PressAnyKey())
+	player.Step();
+	/*if (Input::PressAnyKey())
 	{
 		SceneManager::g_CurrenySceneID = SCENEID::SCENE_ID_FIN_PLAY;
-	}
+	}*/
 }
 
 //プレイシーン描画処理
 void ScenePlay::Draw()
 {
-
+	player.Draw();
 }
 
 //プレイシーン後処理
