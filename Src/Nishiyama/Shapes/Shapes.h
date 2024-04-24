@@ -51,6 +51,9 @@ public:
 	int Get_sizeW() { return sizeW; }
 	int Get_sizeH() { return sizeH; }
 
+	int Get_ImageHandle() { return ImageHandle; }
+	void Delete_ImageHandle() { if(ImageHandle != 0) DeleteGraph(ImageHandle); ImageHandle = 0; }
+
 	void Set_ImageHandle(int NewImage) { ImageHandle = NewImage; }
 	void Set_sizeW(int NewsizeW) { sizeW = NewsizeW; }
 	void Set_sizeH(int NewsizeH) { sizeH = NewsizeH; }
