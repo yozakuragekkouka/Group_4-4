@@ -25,7 +25,7 @@ void SceneTitle::Step()
 		
 	}
 	if (moveFlag) {
-		y -= 7;
+		y -= 8;
 		if (y <= -60) {
 			SceneManager::g_CurrenySceneID = SCENEID::SCENE_ID_FIN_TITLE;
 		}
@@ -54,7 +54,7 @@ void SceneTitle::Draw()
 	SetDrawBlendMode(DX_BLENDMODE_ALPHA, alpha);
 	DrawGraph(0, y-650, handle[1], true);
 	SetDrawBlendMode(DX_BLENDMODE_NOBLEND,0);
-	DrawBox(0, 720, 1280, y, GetColor(0, 0, 0), true);
+	DrawBox(0, 720, 1280, y, GetColor(255, 0, 0), true);
 	DrawRotaGraph(640, 100,1.0,90*3.1415/180, handle[2], true);
 	
 }
