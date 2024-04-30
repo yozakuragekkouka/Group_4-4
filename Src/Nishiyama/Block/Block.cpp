@@ -15,6 +15,8 @@ void Block::Init()
 
 	size.x = (float)(GetRand(BLOCK_SIZE_MAX_X - BLOCK_SIZE_MIN_X) + BLOCK_SIZE_MIN_X);
 	size.y = (float)BLOCK_SIZE_Y;
+
+	isClear = false;
 }
 
 void Block::Step(float CurrentSpeed)

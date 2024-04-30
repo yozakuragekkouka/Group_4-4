@@ -58,7 +58,7 @@ void BlockManager::Draw()
 	{
 		if (Block_Image != -1)
 		{
-			DrawExtendGraph((int)(block[i].Get_pos().x - -block[i].Get_size().x / 2.0f),
+			DrawExtendGraph((int)(block[i].Get_pos().x - block[i].Get_size().x / 2.0f),
 				(int)(block[i].Get_pos().y - block[i].Get_size().y / 2.0f),
 				(int)(block[i].Get_pos().x + block[i].Get_size().x / 2.0f),
 				(int)(block[i].Get_pos().y + block[i].Get_size().y / 2.0f),
@@ -66,7 +66,7 @@ void BlockManager::Draw()
 		}
 		else
 		{
-			DrawBox((int)(block[i].Get_pos().x - -block[i].Get_size().x / 2.0f),
+			DrawBox((int)(block[i].Get_pos().x - block[i].Get_size().x / 2.0f),
 				(int)(block[i].Get_pos().y - block[i].Get_size().y / 2.0f),
 				(int)(block[i].Get_pos().x + block[i].Get_size().x / 2.0f),
 				(int)(block[i].Get_pos().y + block[i].Get_size().y / 2.0f),

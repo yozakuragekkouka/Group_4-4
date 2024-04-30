@@ -2,6 +2,11 @@
 #include "math.h"
 #include "../Nishiyama/Input/Input.h"
 
+Player::~Player()
+{
+	DeleteGraph(handle[0]);
+}
+
 void Player::Init() {
 	//‚¢‚Á‚½‚ñ‰¼’u‚«‚ğƒ[ƒh
 	handle[0] = LoadGraph("Data/Image/Caucasus_front.png");

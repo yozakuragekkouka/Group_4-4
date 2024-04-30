@@ -8,6 +8,7 @@ private:
 	float speed;//’Ž‚Ì‰¡ˆÚ“®‘¬“x
 
 public:
+	~Player();
 
 	void Init();
 

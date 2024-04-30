@@ -9,6 +9,8 @@
 //プレイシーン初期化
 void ScenePlay::Init()
 {
+	Score::Init();
+
 	back.Init();
 	player.Init();
 
