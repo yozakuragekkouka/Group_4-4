@@ -10,6 +10,7 @@ BackGround::BackGround()
 	for (int i = 0; i < BACK_GROUND_NUM; i++)
 	{
 		memset(&BG_Image[i], 0, sizeof(Rect_Data));
+		memset(&wall_Image[i], 0, sizeof(Rect_Data));
 	}
 }
 
@@ -26,6 +27,7 @@ void BackGround::Init()
 	for (int i = 0; i < BACK_GROUND_NUM; i++)
 	{
 		BG_Image[i].RectInit(LoadGraph(BACK_GROUND_PATH), VGet(0.0f, (float)BACK_GROUND_SIZEH * i, 0.0f), BACK_GROUND_SIZEW, BACK_GROUND_SIZEH);
+		wall_Image[i].RectInit(LoadGraph(WALL_GROUND_PATH), BG_Image[i].Get_pos(), BACK_GROUND_SIZEW, BACK_GROUND_SIZEH);
 	}
 }
 
@@ -69,6 +71,11 @@ void BackGround::Step(float pl_radian)
 			ResultBackCount = 0;
 		}
 	}
+
+	for (int i = 0; i < BACK_GROUND_NUM; i++)
+	{
+		wall_Image[i].Set_pos(BG_Image[i].Get_pos());
+	}
 }
 
 void BackGround::Draw()
@@ -87,10 +94,19 @@ void BackGround::Draw()
 	}
 }
 
+void BackGround::Wall_Draw()
+{
+	for (int i = 0; i < BACK_GROUND_NUM; i++)
+	{
+		wall_Image[i].DrawRect();
+	}
+}
+
 void BackGround::Fin()
 {
 	for (int i = 0; i < BACK_GROUND_NUM; i++)
 	{
 		BG_Image[i].RectFin();
+		wall_Image[i].RectFin();
 	}
 }

@@ -9,6 +9,7 @@ constexpr int BACK_GROUND_SIZEH = 720;
 constexpr int BACK_GROUND_OVER = 30 + BACK_GROUND_SIZEH;
 
 constexpr char BACK_GROUND_PATH[128] = "";
+constexpr char WALL_GROUND_PATH[128] = "Data/Image/wall.png";
 
 class BackGround
 {
@@ -16,6 +17,7 @@ private:
 	float speed;
 	int ResultBackCount;
 	Rect_Data BG_Image[BACK_GROUND_NUM];
+	Rect_Data wall_Image[BACK_GROUND_NUM];
 
 public:
 	BackGround();
@@ -24,6 +26,7 @@ public:
 	void Init();
 	void Step(float pl_radian);
 	void Draw();
+	void Wall_Draw();
 	void Fin();
 
 	void SetSpeed(float New_Speed) { speed = New_Speed; }

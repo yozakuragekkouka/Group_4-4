@@ -46,6 +46,7 @@ void ScenePlay::Draw()
 	player.Draw();
 
 	block.Draw();
+	back.Wall_Draw();
 
 	ScoreNumber.Draw_int(Score::GetScore());
 }
