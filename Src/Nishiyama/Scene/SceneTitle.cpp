@@ -62,5 +62,8 @@ void SceneTitle::Draw()
 //ƒ^ƒCƒgƒ‹Œãˆ—
 void SceneTitle::Fin()
 {
+	for (int index = 0; index < 3; index++) {
+		DeleteGraph(handle[index]);
+	}
 	SceneManager::g_CurrenySceneID = SCENEID::SCENE_ID_INIT_PLAY;
 }
